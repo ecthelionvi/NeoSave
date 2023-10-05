@@ -57,7 +57,7 @@ NeoSave.setup = function(user_settings)
     config[k] = v
   end
 
-  autocmd({ "InsertLeave", "TextChanged", "BufAdd }, {
+  autocmd({ "InsertLeave", "TextChanged", "TextChangedI" }, {
     group = augroup("auto-save", { clear = true }),
     callback = function()
       NeoSave.auto_save()
